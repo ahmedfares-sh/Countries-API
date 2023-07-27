@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" type="module" defer></script>
+    <title>Countries</title>
+  </head>
+  <body>
+    <nav class="box-shadow">
+      <div class="container">
+        <h1>Where in the world?</h1>
+        <span id="dark"><i class="fa-regular fa-moon"></i> Dark Mood</span>
+      </div>
+    </nav>
+    <main>
+      <section class="filter" id="filter">
+        <div class="container">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search for Country"
+          />
+          <select name="fliter-select-box" id="fliter-select-box">
+            <i class="fa-regular fa-moon"></i>
+            <option value="" disabled selected>Select Region</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">America</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+            <option value="">All</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="content" id="content">
+        <div class="container">
+
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+:root {
+  --element-color: hsl(209, 23%, 22%);
+  --bg-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  /***************/
+  --dark-blue-element: hsl(209, 23%, 22%);
+  --dark-blue-bg: hsl(207, 26%, 17%);
+  --Light-Mode-Text: hsl(200, 15%, 8%);
+  --Light-Mode-input: hsl(0, 0%, 52%);
+  --light-mode-bg: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Nunito Sans", sans-serif;
+}
+/*gloabal rules start*/
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+ul {
+  list-style: none;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screen */
+@media (min-width: 1400px) {
+  .container {
+    width: 1070px;
+  }
+}
+/*gloabal rules end*/
+.box-shadow {
+  box-shadow: 0 0 1px 0 var(--text-color);
+}
+nav .container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  background-color: var(--element-color);
+  height: 60px;
+}
+nav h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+nav span {
+  cursor: pointer;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+}
+
+.filter {
+  padding-block: 50px;
+}
+.filter #fliter-select-box {
+  background-color: var(--element-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 200px;
+  border: transparent;
+  outline: transparent;
+  display: block;
+  margin-bottom: 5px;
+}
+.filter #fliter-select-box:focus {
+  border: none;
+  outline: none;
+}
+.filter [name="search"] {
+  width: 200px;
+  padding: 5px 5px 5px 30px;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  border: 2px solid var(--text-color);
+}
+.filter .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .filter .container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+/*end filter*/
+
+/* start content */
+
+.content {
+  padding-block: 50px;
+}
+.content .container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.content .container .card {
+  background-color: var(--element-color);
+  transition: 0.3s;
+}
+.content .container .card:hover {
+  transform: scale(1.05);
+}
+.content .container .card .image {
+  cursor: pointer;
+  height: 200px;
+  width: 100%;
+}
+.content .container .card a,
+.content .container .card img {
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+.content .container .card .text {
+  padding: 10px;
+}
+.content .container .card h3 {
+  font-size: 16px;
+}
+.content .container .card .text div {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.content .container .card .text div span {
+  font-weight: 300;
+}
+
+.back {
+  padding-block: 50px;
+}
+.border span {
+  font-weight: 300;
+  background-color: var(--element-color);
+  border-radius: 10px;
+  color: var(--text-color);
+  display: inline-block;
+  margin: 3px;
+  padding: 5px 10px;
+}
+.back a {
+  font-weight: 600;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  background-color: var(--element-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-inline: 15px;
+}
+.country-details {
+  padding-block: 50px;
+}
+.country-details .container {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.country-details .container .image {
+  flex-basis: 500px;
+}
+.country-details .container .image img {
+  width: 100%;
+}
+.country-details .container h2 {
+  font-weight: 600;
+  font-size: 2em;
+}
+.country-details .container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+}
+
+.country-details .container ul li {
+  margin-bottom: 15px;
+  font-weight: 600;
+  width: 300px;
+}
+.border,
+.country-details .container ul li span {
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  .country-details .container ul {
+    display: block;
+  }
+  .border {
+    margin-top: 150px;
+    display: block;
+  }
+}
