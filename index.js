@@ -60,8 +60,8 @@ function showData(data, region = "", country = "") {
   }
   data.forEach((ele, index) => {
     if (ele.name === "Israel") {
-      ele.name = "طيزي";
-      ele.capital = "فش اقلب";
+      ele.name = "";
+      ele.capital = "";
     }
     let card = document.createElement("div");
     card.addEventListener("click", () => {
